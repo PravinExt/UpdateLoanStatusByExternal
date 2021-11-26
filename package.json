@@ -8,7 +8,7 @@
     "build": "npm run build"
   },
   "repository": {
-    "type": "git",
+    "type": "git", 
     "url": "git+https://github.com/PravinExt/UpdateLoanStatusByExternal.git"
   },
   "author": "",
