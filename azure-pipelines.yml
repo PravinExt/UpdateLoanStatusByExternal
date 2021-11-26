@@ -21,7 +21,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '/home/vsts/work/1/s/'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: 'drop'
