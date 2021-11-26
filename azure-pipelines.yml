@@ -26,3 +26,20 @@ steps:
     archiveType: 'zip'
     archiveFile: 'drop'
     replaceExistingArchive: true
+    
+- script: |
+    pwd
+    ls -l
+
+- task: LambdaDeployFunction@1
+  inputs:
+    awsCredentials: 'awsconnection'
+    regionName: 'ap-south-1'
+    deploymentMode: 'codeandconfiguration'
+    functionName: 'UpdateLoanStatusByExternal'
+    functionHandler: 'index.handler'
+    runtime: 'nodejs12.x'
+    codeLocation: 'localfile'
+    localZipFile: 'drop.zip'
+    roleARN: 'cloudform-LambdaExecutionRole-1XRKE2AES4R75'
+    environment: 'StateMachineArn=arn:aws:states:ap-south-1:618393550001:stateMachine:PBLoanProcessOrchestration'
