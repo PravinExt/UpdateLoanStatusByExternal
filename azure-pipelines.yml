@@ -37,7 +37,7 @@ steps:
     regionName: 'ap-south-1'
     deploymentMode: 'codeandconfiguration'
     functionName: 'UpdateLoanStatusByExternal'
-    functionHandler: 'index.handler'
+    functionHandler: 's/index.handler'
     runtime: 'nodejs12.x'
     codeLocation: 'localfile'
     localZipFile: 'drop.zip'
